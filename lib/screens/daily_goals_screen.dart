@@ -132,7 +132,12 @@ class _DailyGoalsScreenState extends State<DailyGoalsScreen> {
                             fontSize: 30,
                             color: Colors.black,
                           ),
+                          border: OutlineInputBorder(),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.teal),
+                          ),
                         ),
+
                         onSubmitted: (_) {
                           _addTodo();
                         },

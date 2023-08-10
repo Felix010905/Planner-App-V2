@@ -86,6 +86,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 decoration: const InputDecoration(
                   labelText: 'Username',
                   border: OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.teal),
+                  ),
                   labelStyle: TextStyle(
                     fontSize: 18,
                     color: Colors.black,
@@ -98,10 +101,13 @@ class _LoginScreenState extends State<LoginScreen> {
               const SizedBox(height: 16.0),
               TextField(
                 controller: _passwordController,
-                obscureText: !_isPasswordVisible, // Use the variable to toggle
+                obscureText: !_isPasswordVisible,
                 decoration: InputDecoration(
                   labelText: 'Password',
                   border: const OutlineInputBorder(),
+                  focusedBorder: const OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.teal),
+                  ),
                   labelStyle: const TextStyle(
                     fontSize: 18,
                     color: Colors.black,
@@ -128,7 +134,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ElevatedButton(
                 onPressed: _handleLogin,
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.teal,
+                  backgroundColor: Colors.teal,
                 ),
                 child: const Text('Login'),
               ),
@@ -153,5 +159,4 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
     );
   }
-
 }
